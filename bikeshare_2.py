@@ -6,6 +6,7 @@ import datetime
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
+# Define option 'all' with index = 0
 CITY_OPTS = ['chicago', 'new york city', 'washington']
 MONTH_OPTS = ['all', 'january', 'february', 'march', 'april', 'may','june']
 DAY_OF_WEEK_OPTS = ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
