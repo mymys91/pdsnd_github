@@ -205,9 +205,9 @@ def user_stats(df):
 
 def display_data(df):
     """Displays 5 next lines of raw data"""
-    view_input_five = input('\nWould you like to see next 5 rows of data? Please enter yes or no:').lower()
+    view_input_five = input('\nWould you like to see next 5 rows of data? Please enter (y)es or no:').lower()
     start_loc = 0
-    while view_input_five == 'yes':                
+    while view_input_five == 'yes' or view_input_five == 'y':                
         print(df.iloc[start_loc:start_loc+5])
         start_loc += 5
         view_input_five = input("Do you wish to continue?: ").lower()
