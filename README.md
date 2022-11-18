@@ -3,15 +3,18 @@
 ### Date created
 Include the date you created this project and README file.
 
+### Date created
+Created date:  17th Nov 2022
+
 ### Project Title
-Replace the Project Title
+Udacity project learning
 
 ### Description
-Describe what your project is about and what it does
+Learning GIT command
 
 ### Files used
-Include the files used
+Python code
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+N/A
 
