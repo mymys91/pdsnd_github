@@ -144,13 +144,16 @@ def trip_duration_stats(df):
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
     if len(df.index) > 0:
-        # display total travel time
-        total_trip_duration = df['Trip Duration'].sum()   
-        print('Total travel time: %s'% str(datetime.timedelta(seconds = int(total_trip_duration))))
+        try:
+            # display total travel time
+            total_trip_duration = df['Trip Duration'].sum()   
+            print('Total travel time: %s'% str(datetime.timedelta(seconds = int(total_trip_duration))))
 
-        # display mean travel time
-        avg_travel_time = df['Trip Duration'].mean()
-        print('The average travel time: %s.'% round(avg_travel_time, 1))
+            # display mean travel time
+            avg_travel_time = df['Trip Duration'].mean()
+            print('The average travel time: %s.'% round(avg_travel_time, 1))
+        except KeyError:
+            print('Trip Duration stats cannot be calculated because Trip Duration does not appear in the dataframe')
     else:
         print('There is no record with current filter')
 
@@ -203,9 +206,9 @@ def user_stats(df):
 
 def display_data(df):
     """Displays 5 next lines of raw data"""
-    view_input_five = input('\nWould you like to see next 5 rows of data? Please enter yes or no:').lower()
+    view_input_five = input('\nWould you like to see next 5 rows of data? Please enter (y)es or no:').lower()
     start_loc = 0
-    while view_input_five == 'yes':                
+    while view_input_five == 'yes' or view_input_five == 'y':                
         print(df.iloc[start_loc:start_loc+5])
         start_loc += 5
         view_input_five = input("Do you wish to continue?: ").lower()
